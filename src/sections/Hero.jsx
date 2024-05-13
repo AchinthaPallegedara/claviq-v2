@@ -1,31 +1,68 @@
+import { useGSAP } from "@gsap/react";
 import Hero3D from "../components/Hero3D";
 import { Plus, Headset, Dot, ArrowRight, Ellipsis } from "lucide-react";
 import { useState } from "react";
+import gsap from "gsap";
 
 const Hero = () => {
   const [isTalkHovered, setIsTalkHovered] = useState(false);
   const [isMenuHovered, setIsMenuHovered] = useState(false);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".butt",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 0.8,
+        delay: 7.6,
+        stagger: 0.05,
+        ease: "power1.inOut",
+      }
+    );
+    gsap.fromTo(
+      ".para",
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 7.6,
+        stagger: 0.1,
+        ease: "power1.inOut",
+      }
+    );
+  }, []);
   return (
     <div className=" h-screen">
-      <div className=" h-[20vh] w-full  pt-12 max-sm:pt-7 ">
+      <div className=" h-[23vh] w-full  pt-12 max-sm:pt-7 ">
         <div className="w-full  justify-between items-start max-lg:items-center inline-flex  ">
           <img className="w-32 h-11 max-sm:w-24 max-sm:h-7" src="/logo.svg" />
 
-          <span className="max-w-[500px] text-[2em] max-lg:text-[1.5em] text-slate-800 inline-block max-lg:hidden">
-            We help brands create digital
-            <br /> experiences that connect with
-            <br /> their customers
+          <span
+            className="max-w-[500px] text-[2em] max-lg:text-[1.5em] text-slate-800 inline-block max-lg:hidden"
+            id="maintext"
+          >
+            <span className="para">We help brands create digital</span>
+            <br />
+            <span className="para">experiences that connect with</span>
+            <br />
+            <span className="para">their customers</span>
           </span>
 
           <div className="justify-start items-start  gap-4 flex">
             <a href="tel:0094765563418">
-              <div className="w-11 h-11 bg-zinc-300 rounded-full flex items-center justify-center hover:bg-main-500 hover:text-white max-lg:hidden transition-all ">
+              <div className="w-11 h-11 bg-zinc-300 rounded-full flex items-center justify-center hover:bg-main-500 hover:text-white max-lg:hidden transition-all butt ">
                 <Headset />
               </div>
             </a>
             <a href="mailto:hello@claviq.com">
               <div
-                className="w-32 h-11 bg-zinc-800 rounded-3xl flex items-center justify-center hover:bg-main-500 text-white transition-all text-sm max-sm:hidden"
+                className="w-32 h-11 bg-zinc-800 rounded-3xl flex items-center justify-center hover:bg-main-500 text-white transition-all text-sm max-sm:hidden butt "
                 onMouseEnter={() => setIsTalkHovered(true)}
                 onMouseLeave={() => setIsTalkHovered(false)}
               >
@@ -41,7 +78,7 @@ const Hero = () => {
               </div>
             </a>
             <div
-              className="w-24 h-11 bg-zinc-300 rounded-3xl flex items-center justify-center hover:bg-white text-slate-800 transition-all text-sm max-sm:w-10 max-sm:h-10"
+              className="w-24 h-11 bg-zinc-300 rounded-3xl flex items-center justify-center hover:bg-white text-slate-800 transition-all text-sm max-sm:w-10 max-sm:h-10 butt "
               onMouseEnter={() => setIsMenuHovered(true)}
               onMouseLeave={() => setIsMenuHovered(false)}
             >
@@ -61,13 +98,13 @@ const Hero = () => {
           customers
         </div>
       </div>
-      <div className="h-[75vh] max-lg:mt-2 max-sm:mt-0 ">
+      <div className="h-[70vh] max-lg:mt-2 max-sm:mt-0 ">
         <Hero3D style={{ borderRadius: 20 }} />
       </div>
-      <div className="h-[5vh] flex justify-between items-center">
+      <div className="h-[7vh] flex justify-between items-center">
         <Plus />
         <Plus className="max-sm:hidden" />
-        <p className="font-semibold">SCROLL TO EXPLORE</p>
+        <p className="font-medium">SCROLL TO EXPLORE</p>
         <Plus className="max-sm:hidden" />
         <Plus />
       </div>
