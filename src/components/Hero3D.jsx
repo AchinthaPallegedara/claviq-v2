@@ -185,6 +185,10 @@ function Model({ children, color = "white", roughness = 0, ...props }) {
   useFrame((state, delta) => {
     easing.dampC(ref.current.material.color, color, 0.2, delta);
   });
+  useFrame((state, delta) => {
+    ref.current.rotation.x += 0.05 * delta;
+    ref.current.rotation.y += 0.05 * delta;
+  });
   return (
     <group {...props} dispose={null}>
       <mesh

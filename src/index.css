@@ -149,6 +149,35 @@ a {
     transform: rotate(0deg); /* End position */
   }
 }
+@keyframes slideLeft {
+  from {
+    transform: translateX(20px); /* Start position */
+  }
+  to {
+    transform: translateX(0); /* End position */
+  }
+}
+
+@keyframes zoomInAndColourChange {
+  from {
+    transform: scale(1); /* Start position */
+    color: #fff; /* Start colour */
+  }
+  to {
+    transform: scale(60); /* End position */
+    color: #f3521c; /* End colour */
+  }
+}
+@keyframes zoomOutAndColourChange {
+  from {
+    transform: scale(60); /* Start position */
+    color: #f3521c; /* Start colour */
+  }
+  to {
+    transform: scale(1); /* End position */
+    color: #fff; /* End colour */
+  }
+}
 
 .animate-slide-right {
   animation: slideRight 0.5s ease forwards; /* Apply animation */
@@ -159,6 +188,16 @@ a {
 }
 .animate-rotate-back {
   animation: rotateBack 0.5s ease forwards; /* Apply animation */
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.5s ease forwards; /* Apply animation */
+}
+.animate-zoom-in-and-colour-change {
+  animation: zoomInAndColourChange 1s ease forwards; /* Apply animation */
+}
+.animate-zoom-our-and-colour-change {
+  animation: zoomOutAndColourChange 0.5s ease forwards; /* Apply animation */
 }
 
 /* loading screen */
@@ -214,10 +253,15 @@ a {
 .loader-1 {
   position: relative;
   background: #fff;
-  width: 200px;
+  width: 100px;
 }
 
 .loader-2 {
+  position: relative;
+  background: #fff;
+  width: 100px;
+}
+.loader-3 {
   position: relative;
   background: #fff;
   width: 100px;

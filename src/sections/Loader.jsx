@@ -57,25 +57,42 @@ const Loader = () => {
       duration: 2,
       ease: "power2.inOut",
     });
+    gsap.from(".loader-3", {
+      width: 0,
+      delay: 1.9,
+      duration: 2,
+      ease: "power2.inOut",
+    });
 
     gsap.to(".loader", {
+      rotate: 90,
       background: "none",
       delay: 6,
       duration: 0.1,
     });
 
-    gsap.to(".loader-1", {
-      rotate: 90,
-      y: -50,
+    gsap.to(
+      ".loader-1",
+      {
+        rotate: 90,
+        y: -25,
+        x: 25,
+        duration: 0.5,
+      },
+      "<"
+    );
+    gsap.to(".loader-2", {
+      y: 50,
       duration: 0.5,
       delay: 6,
     });
 
     gsap.to(
-      ".loader-2",
+      ".loader-3",
       {
-        x: -75,
-        y: 75,
+        rotate: 90,
+        x: -25,
+        y: -25,
         duration: 0.5,
       },
       "<"
@@ -89,7 +106,7 @@ const Loader = () => {
     });
     gsap.to(".loader", {
       rotate: 45,
-      y: 500,
+      y: -500,
       x: 2000,
       duration: 1,
       delay: 7,
@@ -108,6 +125,7 @@ const Loader = () => {
       <div className="loader">
         <div className="loader-1 bar"></div>
         <div className="loader-2 bar"></div>
+        <div className="loader-3 bar"></div>
       </div>
       <div className="counter">
         <div className="counter-1 digit">
