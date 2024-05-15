@@ -121,7 +121,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="mt-[25vh] max-sm:mt-[10vh]  overflow-y-hidden" ref={divRef}>
+    <div className="mt-[25vh] max-sm:mt-[10vh]  overflow-hidden" ref={divRef}>
       <div className="text-left  items-start">
         <div className="text-9xl max-sm:text-[17vw] font-normal title sm:opacity-50 ">
           Unlocking Digital
