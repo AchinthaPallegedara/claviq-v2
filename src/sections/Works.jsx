@@ -1,4 +1,5 @@
-import React from "react";
+import { useState } from "react";
+import { Dot, ArrowRight } from "lucide-react";
 import WorkCard from "../components/WorkCard";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -6,6 +7,7 @@ import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const Works = () => {
+  const [isTalkHovered, setIsTalkHovered] = useState(false);
   useGSAP(() => {
     if (!window.matchMedia("(max-width: 768px)").matches) {
       gsap.fromTo(
@@ -260,6 +262,33 @@ const Works = () => {
           }
         />
       </div>
+      <a
+        href="#"
+        className="flex w-full items-center justify-center mt-[8vh] max-sm:mt-0"
+      >
+        <div
+          className="w-[180px] h-12 bg-zinc-800 rounded-3xl flex items-center justify-start  text-white transition-all text-sm   my-[6vh] shadow-md shadow-zinc-400 overflow-hidden"
+          onMouseEnter={() => setIsTalkHovered(true)}
+          onMouseLeave={() => setIsTalkHovered(false)}
+        >
+          <Dot
+            className={
+              isTalkHovered
+                ? "animate-zoom-in-and-colour-change "
+                : "size-10 animate-zoom-our-and-colour-change"
+            }
+          />
+
+          <span className={isTalkHovered ? " animate-slide-left" : ""}>
+            SEE ALL PROJECTS
+          </span>
+          {isTalkHovered && (
+            <ArrowRight
+              className={isTalkHovered ? "ml-1 animate-slide-left" : ""}
+            />
+          )}
+        </div>
+      </a>
     </div>
   );
 };

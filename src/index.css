@@ -174,7 +174,7 @@ a {
     color: #fff; /* Start colour */
   }
   to {
-    transform: scale(60); /* End position */
+    transform: scale(85); /* End position */
     color: #f3521c; /* End colour */
   }
 }
