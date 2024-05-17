@@ -123,10 +123,10 @@ const About = () => {
   return (
     <div className="mt-[25vh] max-sm:mt-[10vh]  overflow-hidden" ref={divRef}>
       <div className="text-left  items-start">
-        <div className="text-9xl max-sm:text-[17vw] font-normal title sm:opacity-50 ">
+        <div className="text-9xl max-sm:text-[17vw] font-normal title lg:opacity-50 tracking-tight leading-[0.9] max-lg:text-[110px]">
           Unlocking Digital
         </div>
-        <div className="text-9xl max-sm:text-[17vw] font-normal titleTwo">
+        <div className="text-9xl max-sm:text-[17vw] font-normal titleTwo tracking-tight leading-[0.9] max-lg:text-[110px]">
           Excellence Together
         </div>
       </div>

@@ -4,7 +4,47 @@ import WorkCard from "../components/WorkCard";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
+
 gsap.registerPlugin(ScrollTrigger);
+
+const workCardsData = [
+  {
+    id: "id1",
+    title: "Spotify Clone",
+    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "id2",
+    title: "Spotify Clone",
+    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "id3",
+    title: "Spotify Clone",
+    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "id4",
+    title: "Spotify Clone",
+    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "id5",
+    title: "Spotify Clone",
+    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    id: "id6",
+    title: "Spotify Clone",
+    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+];
 
 const Works = () => {
   const [isTalkHovered, setIsTalkHovered] = useState(false);
@@ -191,76 +231,40 @@ const Works = () => {
   }, []);
   return (
     <div className="mt-[25vh] max-sm:mt-[10vh]">
-      <div className=" font-normal flex items-center max-sm:flex-col mb-[10vh] max-sm:items-start max-sm:mb-[4vh]">
-        <span className="worktitle text-9xl max-sm:hidden">F</span>
-        <span className="worktitle text-9xl max-sm:hidden">e</span>
-        <span className="worktitle text-9xl max-sm:hidden">a</span>
-        <span className="worktitle text-9xl max-sm:hidden">t</span>
-        <span className="worktitle text-9xl max-sm:hidden">u</span>
-        <span className="worktitle text-9xl max-sm:hidden">r</span>
-        <span className="worktitle text-9xl max-sm:hidden">e</span>
-        <span className="worktitle text-9xl max-sm:hidden">d</span>
-        <span className="worktitle text-9xl max-sm:hidden w-[3vw]"></span>
-        <span className="worktitle text-9xl max-sm:hidden">W</span>
-        <span className="worktitle text-9xl max-sm:hidden">o</span>
-        <span className="worktitle text-9xl max-sm:hidden">r</span>
-        <span className="worktitle text-9xl max-sm:hidden">k</span>
-        <span className="sm:hidden text-[17vw]">Featured Work</span>
+      <div className=" font-normal flex items-center max-lg:flex-col mb-[10vh] max-lg:items-start max-sm:mb-[4vh]">
+        <span className="worktitle text-9xl max-lg:hidden w-[4vw]">F</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[4.8vw]">e</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[5vw]">a</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[3vw]">t</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[4.5vw]">u</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[2.6vw]">r</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[4.8vw]">e</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[4vw]">d</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[3vw]"></span>
+        <span className="worktitle text-9xl max-lg:hidden w-[7.5vw]">W</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[4.6vw]">o</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[2.6vw]">r</span>
+        <span className="worktitle text-9xl max-lg:hidden w-[4vw]">k</span>
 
-        <p className="w-[16vw] max-sm:w-full text-sm workdec ml-auto max-sm:ml-0 max-sm:text-lg max-sm:mt-[4vh]">
+        <span className="lg:hidden text-[110px] max-sm:text-[17vw] tracking-tight leading-[0.9]">
+          Featured Work
+        </span>
+
+        <p className="w-[16vw] max-lg:w-full text-sm workdec ml-auto max-lg:ml-0  max-lg:text-2xl max-sm:text-lg max-lg:mt-[4vh]">
           We knew to be done is good, but sharing our experiences and it “works”
           is way better.
         </p>
       </div>
       <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1">
-        <WorkCard
-          id={"id1"}
-          title={"Spotify Clone"}
-          tagLine={"WEB•DESIGN•DEVELOPMENT"}
-          img={
-            "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          }
-        />
-        <WorkCard
-          id={"id2"}
-          title={"Spotify Clone"}
-          tagLine={"WEB•DESIGN•DEVELOPMENT"}
-          img={
-            "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          }
-        />{" "}
-        <WorkCard
-          id={"id3"}
-          title={"Spotify Clone"}
-          tagLine={"WEB•DESIGN•DEVELOPMENT"}
-          img={
-            "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          }
-        />{" "}
-        <WorkCard
-          id={"id4"}
-          title={"Spotify Clone"}
-          tagLine={"WEB•DESIGN•DEVELOPMENT"}
-          img={
-            "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          }
-        />{" "}
-        <WorkCard
-          id={"id5"}
-          title={"Spotify Clone"}
-          tagLine={"WEB•DESIGN•DEVELOPMENT"}
-          img={
-            "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          }
-        />
-        <WorkCard
-          id={"id6"}
-          title={"Spotify Clone"}
-          tagLine={"WEB•DESIGN•DEVELOPMENT"}
-          img={
-            "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          }
-        />
+        {workCardsData.map((card) => (
+          <WorkCard
+            key={card.id}
+            id={card.id}
+            title={card.title}
+            tagLine={card.tagLine}
+            img={card.img}
+          />
+        ))}
       </div>
       <a
         href="#"

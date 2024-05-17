@@ -1,5 +1,6 @@
 import About from "./sections/About";
 import Hero from "./sections/Hero";
+import Ideas from "./sections/Ideas";
 import Works from "./sections/Works";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <Hero />
       <About />
       <Works />
+      <Ideas />
     </main>
   );
 };
