@@ -322,3 +322,12 @@ svg.squigglemobile {
   left: 0;
   z-index: -1;
 }
+
+svg.squiggleSeconed {
+  width: 100vw;
+  position: absolute;
+  top: 490vh;
+  right: 0;
+  left: 12vw;
+  z-index: -1;
+}
