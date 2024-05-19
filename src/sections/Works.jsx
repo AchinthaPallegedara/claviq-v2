@@ -10,39 +10,39 @@ gsap.registerPlugin(ScrollTrigger);
 const workCardsData = [
   {
     id: "id1",
-    title: "Spotify Clone",
-    tagLine: "WEB•DESIGN•DEVELOPMENT",
+    title: "DevOverFlow",
+    tagLine: "WEB•WEB-APP•DEVELOPMENT",
     img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: "id2",
     title: "Spotify Clone",
-    tagLine: "WEB•DESIGN•DEVELOPMENT",
-    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    tagLine: "WEB•SAAS•DEVELOPMENT",
+    img: "https://images.pexels.com/photos/22757512/pexels-photo-22757512/free-photo-of-trevi-fountain-in-rome-italy.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
   },
   {
     id: "id3",
-    title: "Spotify Clone",
+    title: "HiLink",
     tagLine: "WEB•DESIGN•DEVELOPMENT",
-    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://images.pexels.com/photos/23962930/pexels-photo-23962930/free-photo-of-zurich.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     id: "id4",
-    title: "Spotify Clone",
+    title: "EcomAdv",
     tagLine: "WEB•DESIGN•DEVELOPMENT",
-    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://images.pexels.com/photos/21336291/pexels-photo-21336291/free-photo-of-woman-in-a-rocky-cave.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
   },
   {
     id: "id5",
-    title: "Spotify Clone",
+    title: "Promptopia",
     tagLine: "WEB•DESIGN•DEVELOPMENT",
-    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://images.pexels.com/photos/23962764/pexels-photo-23962764/free-photo-of-a-black-and-white-photo-of-a-ferry-boat.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
   },
   {
     id: "id6",
-    title: "Spotify Clone",
+    title: "Apple Clone",
     tagLine: "WEB•DESIGN•DEVELOPMENT",
-    img: "https://images.pexels.com/photos/355580/pexels-photo-355580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://images.pexels.com/photos/21795464/pexels-photo-21795464/free-photo-of-a-close-up-of-pink-flowers-on-a-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
