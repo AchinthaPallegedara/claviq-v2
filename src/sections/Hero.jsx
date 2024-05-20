@@ -68,10 +68,20 @@ const Hero = () => {
               >
                 {isTalkHovered && (
                   <ArrowRight
-                    className={isTalkHovered ? "mr-1 animate-slide-right" : ""}
+                    className={
+                      isTalkHovered
+                        ? "mr-1 animate-slide-right"
+                        : "animate-slide-left"
+                    }
                   />
                 )}
-                <span className={isTalkHovered ? " animate-slide-right" : ""}>
+                <span
+                  className={
+                    isTalkHovered
+                      ? " animate-slide-right"
+                      : "animate-slide-left"
+                  }
+                >
                   LET'S TALK
                 </span>
                 <Dot className={isTalkHovered ? "hidden" : ""} />
