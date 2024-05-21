@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Ideas = () => {
   const divRef = useRef(null);
   const contentRef = useRef(null);
+
   useEffect(() => {
     const svg = divRef.current.querySelector("svg.squiggleSeconed");
     const path = svg.querySelector("path");
@@ -94,19 +95,19 @@ const Ideas = () => {
         toggleActions: "play play reverse reverse",
       },
     });
-    // gsap.to("#ipad", {
-    //   opacity: 0,
-    //   delay: 5,
-    //   duration: 2,
-    //   reversedduration: 0,
-    //   ease: "power2.inOut",
-    //   scrollTrigger: {
-    //     trigger: "#ipad",
-    //     start: "top 10%",
-    //     end: "bottom 85%",
-    //     toggleActions: "play play reverse reverse",
-    //   },
-    // });
+    gsap.to(contentRef.current, {
+      opacity: 0,
+      delay: 5,
+      duration: 2,
+      reversedduration: 0,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: "#ipad",
+        start: "top 10%",
+        end: "bottom 85%",
+        toggleActions: "play play reverse reverse",
+      },
+    });
   }, []);
   return (
     <div
