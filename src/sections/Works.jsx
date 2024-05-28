@@ -230,7 +230,7 @@ const Works = () => {
     );
   }, []);
   return (
-    <div className="mt-[25vh] max-sm:mt-[10vh]">
+    <section className="mt-[25vh] max-sm:mt-[10vh]">
       <div className=" font-normal flex items-center max-lg:flex-col mb-[10vh] max-lg:items-start max-sm:mb-[4vh]">
         <span className="worktitle text-9xl max-lg:hidden w-[4vw]">F</span>
         <span className="worktitle text-9xl max-lg:hidden w-[4.8vw]">e</span>
@@ -293,7 +293,7 @@ const Works = () => {
           )}
         </div>
       </a>
-    </div>
+    </section>
   );
 };
 

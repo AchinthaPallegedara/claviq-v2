@@ -75,14 +75,15 @@ const Ideas = () => {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#ipad",
-        start: "top 10%",
+        start: "top 12%",
         end: "bottom 85%",
+
         toggleActions: "play play reverse reverse",
       },
     });
+
     gsap.to(contentRef.current, {
       rotate: 9.4,
-
       y: -10,
       x: 800,
       duration: 2,
@@ -90,28 +91,39 @@ const Ideas = () => {
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: "#ipad",
-        start: "top 10%",
+        start: "top 12%",
         end: "bottom 85%",
         toggleActions: "play play reverse reverse",
       },
     });
-    gsap.to(contentRef.current, {
-      opacity: 0,
-      delay: 5,
-      duration: 2,
-      reversedduration: 0,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: "#ipad",
-        start: "top 10%",
-        end: "bottom 85%",
-        toggleActions: "play play reverse reverse",
-      },
-    });
+    // gsap.to(contentRef.current, {
+    //   display: "none",
+    //   delay: 5,
+    //   duration: 2,
+    //   reversedduration: 0,
+    //   ease: "power2.inOut",
+    //   scrollTrigger: {
+    //     trigger: "#ipad",
+    //     start: "top 12%",
+    //     end: "bottom 85%",
+    //     toggleActions: "play play reverse reverse",
+    //   },
+    // });
+    // gsap.to("#theHiddenOne", {
+    //   display: "block",
+    //   delay: 5,
+    //   duration: 2,
+    //   scrollTrigger: {
+    //     trigger: "#ipad",
+    //     start: "top 12%",
+    //     end: "bottom 85%",
+    //     toggleActions: "play play reverse reverse",
+    //   },
+    // });
   }, []);
   return (
-    <div
-      className="mt-[20vh] max-sm:mt-[10vh]"
+    <section
+      className="mt-[20vh] max-sm:mt-[10vh] overflow-y-hidden "
       ref={divRef}
       id="aboutContainer"
     >
@@ -121,12 +133,13 @@ const Ideas = () => {
           <span className="ideatitle ml-44">Uniquely Crafted </span>
           <span className="ideatitle ml-44">Experineces</span>
         </span>
+
         <div className="flex  gap-4 max-sm:flex-col-reverse">
-          <div className="flex w-[50vw] h-[82vh] max-sm:h-[40vh] max-sm:w-full max-sm:mb-[30vh]">
+          <div className=" flex w-[50vw] h-[82vh] max-sm:h-[40vh] max-sm:w-full max-sm:mb-[30vh]">
             <img
               src="/iPad.svg"
               alt="ipad"
-              className="mt-[10vh] translate-y-20 max-sm:mt-0"
+              className="mt-[10vh] translate-y-20 max-sm:mt-0 "
               id="ipad"
             />
           </div>
@@ -175,7 +188,7 @@ const Ideas = () => {
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </section>
   );
 };
 
