@@ -1,6 +1,5 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -8,67 +7,64 @@ gsap.registerPlugin(ScrollTrigger);
 const Ideas = () => {
   const divRef = useRef(null);
   const contentRef = useRef(null);
-  // if (!window.matchMedia("(max-width: 768px)").matches) {
-  const timeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#ipad",
-      start: "top 12%",
-      end: "bottom 95%",
-
-      toggleActions: "play play reverse reverse",
-      // preventOverlaps: true,
-      // fastScrollEnd: true,
-    },
-  });
-  //   useGSAP(() => {
-  //     timeline.to(contentRef.current, {
-  //       scale: 2.7,
-  //       duration: 2,
-  //       rotate: 9.4,
-  //       y: -10,
-  //       x: 800,
-  //       ease: "power2.inOut",
-  //     });
-
-  //     timeline.to("#theHiddenOne", {
-  //       display: "block",
-  //       opacity: 1,
-  //       duration: 0.1,
-  //       ease: "power2.inOut",
-  //     });
-  //   }, []);
-  // }
-  // if (window.matchMedia("(max-width: 768px)").matches) {
-  //   const timelineMob = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: "#ipad",
-  //       start: "top 42%",
-  //       end: "bottom 85%",
-
-  //       toggleActions: "play play reverse reverse",
-  //       preventOverlaps: true,
-  //       fastScrollEnd: true,
-  //     },
-  //   });
-  //   useGSAP(() => {
-  //     timelineMob.to("#ipad", {
-  //       scale: 5,
-  //       duration: 2,
-  //       rotate: 9.4,
-
-  //       ease: "power2.inOut",
-  //     });
-
-  //     timelineMob.to("#theHiddenOne", {
-  //       display: "block",
-  //       opacity: 1,
-  //       duration: 0.1,
-  //       ease: "power2.inOut",
-  //     });
-  //   }, []);
-  // }
 
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (!isMobile) {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#ipad",
+          start: "top 12%",
+          end: "bottom 95%",
+          toggleActions: "play play reverse reverse",
+          preventOverlaps: true,
+          fastScrollEnd: true,
+        },
+      });
+
+      timeline.to(contentRef.current, {
+        scale: 2.7,
+        duration: 2,
+        rotate: 9.4,
+        y: -10,
+        x: 800,
+        ease: "power2.inOut",
+      });
+
+      timeline.to("#theHiddenOne", {
+        display: "block",
+        opacity: 1,
+        duration: 0.1,
+        ease: "power2.inOut",
+      });
+    } else {
+      const timelineMob = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#ipad",
+          start: "top 42%",
+          end: "bottom 85%",
+          toggleActions: "play play reverse reverse",
+          preventOverlaps: true,
+          fastScrollEnd: true,
+        },
+      });
+
+      timelineMob.to("#ipad", {
+        scale: 5,
+        duration: 2,
+        rotate: 9.4,
+        ease: "power2.inOut",
+      });
+
+      timelineMob.to("#theHiddenOne", {
+        display: "block",
+        opacity: 1,
+        duration: 0.1,
+        ease: "power2.inOut",
+      });
+    }
+
     const svg = divRef.current.querySelector("svg.squiggleSeconed");
     const path = svg.querySelector("path");
 
@@ -92,7 +88,8 @@ const Ideas = () => {
       tl.kill();
     };
   }, []);
-  useGSAP(() => {
+
+  useEffect(() => {
     gsap.fromTo(
       ".ideatitle",
       {
@@ -104,16 +101,15 @@ const Ideas = () => {
         opacity: 1,
         stagger: 0.05,
         duration: 0.8,
-
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".ideatitle",
           start: "bottom bottom",
           end: "top 10%",
-          // toggleActions: "play play reverse play",
         },
       }
     );
+
     gsap.to("#ipad", {
       y: 0,
       duration: 1,
@@ -125,22 +121,8 @@ const Ideas = () => {
         scrub: true,
       },
     });
-    timeline.to(contentRef.current, {
-      scale: 2.7,
-      duration: 2,
-      rotate: 9.4,
-      y: -10,
-      x: 800,
-      ease: "power2.inOut",
-    });
-
-    timeline.to("#theHiddenOne", {
-      display: "block",
-      opacity: 1,
-      duration: 0.1,
-      ease: "power2.inOut",
-    });
   }, []);
+
   return (
     <section
       className="mt-[20vh] max-sm:mt-[10vh] px-[72px] max-lg:px-6 max-xl:px-10 overflow-y-hidden "
@@ -154,7 +136,7 @@ const Ideas = () => {
           <span className="ideatitle ml-44">Experineces</span>
         </span>
 
-        <div className="flex  gap-4 max-sm:flex-col-reverse">
+        <div className="flex gap-4 max-sm:flex-col-reverse">
           <div className="relative flex w-[50vw] h-[82vh] max-sm:h-[40vh] max-sm:w-full max-sm:mb-[30vh]">
             <img
               src="/iPad.svg"

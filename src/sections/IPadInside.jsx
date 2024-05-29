@@ -47,7 +47,7 @@ const IPadInside = () => {
           playsInline
         ></video>
       </div>
-      <Footer />{" "}
+      <Footer />
     </section>
   );
 };
