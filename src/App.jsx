@@ -13,7 +13,6 @@ const App = () => {
       <Works />
       <Ideas />
       <IPadInside />
-      {/* <Footer /> */}
     </main>
   );
 };

@@ -121,7 +121,7 @@ const Loader = () => {
   });
 
   return (
-    <div className="loading-screen">
+    <div className="loading-screen z-20">
       <div className="loader">
         <div className="loader-1 bar"></div>
         <div className="loader-2 bar"></div>
