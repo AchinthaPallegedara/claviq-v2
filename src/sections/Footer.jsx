@@ -9,11 +9,15 @@ const Footer = () => {
   useGSAP(() => {}, []);
 
   return (
-    <section className="mt-[200vh] flex items-center w-full h-[100vh] justify-center">
-      <h3 className="text-[12vw] font-bold text-center">
-        Let's Work
+    <section className="mt-[200vh] flex items-center w-full h-[100vh] justify-center bg-black">
+      <h3 className="">
+        <span className="relative text-[12vw] font-normal text-center text-white  underline-animation">
+          Let's Work
+        </span>
         <br />
-        Together
+        <span className="relative text-[12vw] font-normal text-center text-white  underline-animation">
+          Together
+        </span>
       </h3>
     </section>
   );

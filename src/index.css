@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .underline-animation::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 20px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: width 0.3s;
+  }
+
+  .underline-animation:hover::after {
+    width: 100%;
+  }
+}
+
 html {
   font-family: "Lufga", sans-serif;
   font-weight: 400;
