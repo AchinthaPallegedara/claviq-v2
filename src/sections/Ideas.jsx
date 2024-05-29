@@ -2,11 +2,71 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Ideas = () => {
   const divRef = useRef(null);
   const contentRef = useRef(null);
+  if (!window.matchMedia("(max-width: 768px)").matches) {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#ipad",
+        start: "top 12%",
+        end: "bottom 95%",
+
+        toggleActions: "play play reverse reverse",
+        preventOverlaps: true,
+        fastScrollEnd: true,
+      },
+    });
+    useGSAP(() => {
+      timeline.to(contentRef.current, {
+        scale: 2.7,
+        duration: 2,
+        rotate: 9.4,
+        y: -10,
+        x: 800,
+        ease: "power2.inOut",
+      });
+
+      timeline.to("#theHiddenOne", {
+        display: "block",
+        opacity: 1,
+        duration: 0.1,
+        ease: "power2.inOut",
+      });
+    }, []);
+  }
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    const timelineMob = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#ipad",
+        start: "top 42%",
+        end: "bottom 85%",
+
+        toggleActions: "play play reverse reverse",
+        preventOverlaps: true,
+        fastScrollEnd: true,
+      },
+    });
+    useGSAP(() => {
+      timelineMob.to("#ipad", {
+        scale: 5,
+        duration: 2,
+        rotate: 9.4,
+
+        ease: "power2.inOut",
+      });
+
+      timelineMob.to("#theHiddenOne", {
+        display: "block",
+        opacity: 1,
+        duration: 0.1,
+        ease: "power2.inOut",
+      });
+    }, []);
+  }
 
   useEffect(() => {
     const svg = divRef.current.querySelector("svg.squiggleSeconed");
@@ -56,7 +116,6 @@ const Ideas = () => {
     );
     gsap.to("#ipad", {
       y: 0,
-
       duration: 1,
       delay: 0.3,
       scrollTrigger: {
@@ -66,64 +125,10 @@ const Ideas = () => {
         scrub: true,
       },
     });
-
-    gsap.to(contentRef.current, {
-      scale: 2.7,
-      duration: 2,
-      reversedduration: 0,
-
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: "#ipad",
-        start: "top 12%",
-        end: "bottom 85%",
-
-        toggleActions: "play play reverse reverse",
-      },
-    });
-
-    gsap.to(contentRef.current, {
-      rotate: 9.4,
-      y: -10,
-      x: 800,
-      duration: 2,
-      reversedduration: 0,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: "#ipad",
-        start: "top 12%",
-        end: "bottom 85%",
-        toggleActions: "play play reverse reverse",
-      },
-    });
-    // gsap.to(contentRef.current, {
-    //   display: "none",
-    //   delay: 5,
-    //   duration: 2,
-    //   reversedduration: 0,
-    //   ease: "power2.inOut",
-    //   scrollTrigger: {
-    //     trigger: "#ipad",
-    //     start: "top 12%",
-    //     end: "bottom 85%",
-    //     toggleActions: "play play reverse reverse",
-    //   },
-    // });
-    // gsap.to("#theHiddenOne", {
-    //   display: "block",
-    //   delay: 5,
-    //   duration: 2,
-    //   scrollTrigger: {
-    //     trigger: "#ipad",
-    //     start: "top 12%",
-    //     end: "bottom 85%",
-    //     toggleActions: "play play reverse reverse",
-    //   },
-    // });
   }, []);
   return (
     <section
-      className="mt-[20vh] max-sm:mt-[10vh] overflow-y-hidden "
+      className="mt-[20vh] max-sm:mt-[10vh] px-[72px] max-lg:px-6 max-xl:px-10 overflow-y-hidden "
       ref={divRef}
       id="aboutContainer"
     >
@@ -135,14 +140,15 @@ const Ideas = () => {
         </span>
 
         <div className="flex  gap-4 max-sm:flex-col-reverse">
-          <div className=" flex w-[50vw] h-[82vh] max-sm:h-[40vh] max-sm:w-full max-sm:mb-[30vh]">
+          <div className="relative flex w-[50vw] h-[82vh] max-sm:h-[40vh] max-sm:w-full max-sm:mb-[30vh]">
             <img
               src="/iPad.svg"
               alt="ipad"
-              className="mt-[10vh] translate-y-20 max-sm:mt-0 "
+              className="mt-[10vh] translate-y-20 max-sm:mt-0 z-0"
               id="ipad"
             />
           </div>
+
           <div className="flex w-[32vw] h-[82vh] flex-col mt-[28vh] ml-[5vw] max-sm:h-[30vh] max-sm:w-full max-sm:mt-[10vh] max-sm:ml-0">
             <p className="text-2xl max-sm:text-lg">
               At Claviq, we don't follow trends for the sake of it. We believe

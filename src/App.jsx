@@ -3,15 +3,17 @@ import Hero from "./sections/Hero";
 import Ideas from "./sections/Ideas";
 import Works from "./sections/Works";
 import IPadInside from "./sections/IPadInside";
+import Footer from "./sections/Footer";
 
 const App = () => {
   return (
-    <main className="w-full px-[72px] max-lg:px-6 max-xl:px-10  ">
+    <main className="w-full scroll-smooth">
       <Hero />
       <About />
       <Works />
-      {/* <IPadInside /> */}
       <Ideas />
+      <IPadInside />
+      {/* <Footer /> */}
     </main>
   );
 };

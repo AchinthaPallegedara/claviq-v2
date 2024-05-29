@@ -38,7 +38,7 @@ const Hero = () => {
     );
   }, []);
   return (
-    <section className=" h-screen">
+    <section className=" h-screen px-[72px] max-lg:px-6 max-xl:px-10">
       <div className=" h-[23vh] w-full  pt-12 max-sm:pt-7 ">
         <div className="w-full  justify-between items-start max-lg:items-center inline-flex  ">
           <img className="w-32 h-11 max-sm:w-24 max-sm:h-7" src="/logo.svg" />

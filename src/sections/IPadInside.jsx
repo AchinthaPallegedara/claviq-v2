@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import Footer from "./Footer";
 
 const IPadInside = () => {
   const vidRef = useRef(null);
@@ -31,20 +32,22 @@ const IPadInside = () => {
     }
   }, []);
   return (
-    <section className="h-[300vh] hidden" ref={vidRef} id="theHiddenOne">
-      <div
-        className="sticky top-0 left-0 w-[100vw] h-[100vh] -m-[72px] max-lg:-m-6 max-xl:-m-10"
-        id="vidiPad"
-      >
+    <section
+      className="h-[300vh] absolute top-[545vh] max-sm:top-[570vh] hidden opacity-0 left-0 z-10"
+      ref={vidRef}
+      id="theHiddenOne"
+    >
+      {/* -m-[72px] max-lg:-m-6 max-xl:-m-10 */}
+      <div className="sticky top-0 left-0 w-[100vw] h-[100vh] " id="vidiPad">
         <video
-          src="/astro.mp4"
+          src="https://assets.mixkit.co/videos/2408/2408-720.mp4"
           className="w-full h-full object-cover"
-          autoPlay
           loop
           muted
           playsInline
         ></video>
       </div>
+      <Footer />{" "}
     </section>
   );
 };

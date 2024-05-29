@@ -122,7 +122,7 @@ const About = () => {
 
   return (
     <section
-      className="mt-[25vh] max-sm:mt-[10vh]  overflow-hidden"
+      className="mt-[25vh] max-sm:mt-[10vh] px-[72px] max-lg:px-6 max-xl:px-10 overflow-hidden"
       ref={divRef}
     >
       <div className="text-left  items-start">
@@ -146,14 +146,10 @@ const About = () => {
               loop
               muted
               playsInline={true}
-              key={
-                "https://assets.mixkit.co/videos/preview/mixkit-young-man-walking-listening-to-music-from-his-headphones-4855-large.mp4"
-              }
+              key={"https://assets.mixkit.co/videos/13231/13231-720.mp4"}
             >
               <source
-                src={
-                  "https://assets.mixkit.co/videos/preview/mixkit-young-man-walking-listening-to-music-from-his-headphones-4855-large.mp4"
-                }
+                src={"https://assets.mixkit.co/videos/13231/13231-720.mp4"}
                 type="video/mp4"
               />
             </video>
