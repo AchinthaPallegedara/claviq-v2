@@ -6,8 +6,8 @@
   .underline-animation::after {
     content: "";
     position: absolute;
-    background-color: #fff;
-    height: 20px;
+    background-color: #000;
+    height: 15px;
     width: 0;
     left: 0;
     bottom: -1px;
