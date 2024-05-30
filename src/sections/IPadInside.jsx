@@ -53,3 +53,62 @@ const IPadInside = () => {
 };
 
 export default IPadInside;
+
+// import React, { useEffect, useRef } from "react";
+// import Footer from "./Footer";
+
+// const VideoPage = () => {
+//   const videoRef = useRef(null);
+//   const setHeightRef = useRef(null);
+//   const playbackConst = 500;
+
+//   useEffect(() => {
+//     const vid = videoRef.current;
+//     const setHeight = setHeightRef.current;
+
+//     const handleLoadedMetadata = () => {
+//       setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+//     };
+
+//     const scrollPlay = () => {
+//       const frameNumber = window.pageYOffset / playbackConst;
+//       vid.currentTime = frameNumber;
+//       window.requestAnimationFrame(scrollPlay);
+//     };
+
+//     vid.addEventListener("loadedmetadata", handleLoadedMetadata);
+//     window.requestAnimationFrame(scrollPlay);
+
+//     return () => {
+//       vid.removeEventListener("loadedmetadata", handleLoadedMetadata);
+//     };
+//   }, []);
+
+//   return (
+//     <section
+//       className=" top-[550vh] max-sm:top-[570vh] hidden opacity-0 left-0 z-10"
+//       id="theHiddenOne"
+//     >
+//       <div id="set-height" ref={setHeightRef}>
+//         <video id="v0" tabIndex="0" preload="auto" loop ref={videoRef}>
+//           {/* <source
+//             type='video/webm; codecs="vp8, vorbis"'
+//             src="/ipadvideo.webm"
+//           /> */}
+//           <source
+//             type='video/ogg; codecs="theora, vorbis"'
+//             src="https://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.ogv"
+//           />
+//           <source
+//             type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+//             src="https://videos.pexels.com/video-files/2759477/2759477-hd_1280_720_60fps.mp4"
+//           />
+//           Sorry, your browser does not support the &lt;video&gt; element.
+//         </video>
+//       </div>
+//       <Footer />
+//     </section>
+//   );
+// };
+
+// export default VideoPage;

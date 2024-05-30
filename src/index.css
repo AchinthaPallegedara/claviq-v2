@@ -348,3 +348,14 @@ svg.squiggleSeconed {
   left: 12vw;
   z-index: -1;
 }
+
+#set-height {
+  display: block;
+}
+
+#v0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
