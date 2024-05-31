@@ -1,62 +1,95 @@
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { Dot, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import gsap from "gsap";
 
 const Footer = () => {
-  const t1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#footerSection",
-      start: "top 50%",
-      end: "bottom 80%",
-      scrub: true,
-    },
-  });
-  useGSAP(() => {
-    t1.to("#footerSection", {
-      backgroundColor: "#000",
-
-      duration: 1,
-      delay: 2,
-    });
-    t1.fromTo(
-      "#footerTitle",
-      {
-        y: 100,
-        duration: 1,
-      },
-      {
-        y: -60,
-        duration: 1,
-      }
-    );
-    t1.to("#workText", {
-      rotate: 10,
-
-      duration: 1,
-      delay: 2,
-    });
-  }, []);
+  const [isTalkHovered, setIsTalkHovered] = useState(false);
 
   return (
-    <section
-      className="mt-[200vh] flex items-center w-full h-[100vh] justify-center text-white "
-      id="footerSection"
-    >
-      <h3
-        className="text-[12vw] font-normal text-center   underline-offset-3 transition-all duration-300 ease-in-out "
-        id="footerTitle"
-      >
-        <span className="">
-          Let's <span id="workText">Work</span>
-        </span>
-        <br />
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-main-300 via-main-500 to-main-100 ">
-          Together
-        </span>
-      </h3>
-    </section>
+    <footer className=" flex flex-col mt-[200vh] w-full px-[72px] max-lg:px-6 max-xl:px-10 ">
+      <div className="flex flex-row items-center justify-between mb-[12vh]">
+        <div className="text-9xl max-sm:text-[17vw] font-medium tracking-tighter leading-[0.9] max-lg:text-[110px] w-[70vw]">
+          <h3 className="bg-clip-text text-transparent bg-gradient-to-r from-black via-main-500 to-main-300">
+            Let's Make It Happen Together.
+          </h3>
+        </div>
+        <div className="w-[20vw] text-xl flex flex-col space-y-5 text-right">
+          <p>
+            We champion transformation through design, regardless of your
+            project idea or goal.
+          </p>
+          <a href="mailto:hello@claviq.com" className="ml-auto">
+            <div
+              className="w-32 h-11 bg-zinc-800 rounded-3xl flex items-center justify-center hover:bg-main-500 text-white transition-all text-sm max-sm:hidden butt"
+              onMouseEnter={() => setIsTalkHovered(true)}
+              onMouseLeave={() => setIsTalkHovered(false)}
+            >
+              {isTalkHovered && (
+                <ArrowRight
+                  className={
+                    isTalkHovered
+                      ? "mr-1 animate-slide-right"
+                      : "animate-slide-left"
+                  }
+                />
+              )}
+              <span
+                className={
+                  isTalkHovered ? "animate-slide-right" : "animate-slide-left"
+                }
+              >
+                LET'S TALK
+              </span>
+              <Dot className={isTalkHovered ? "hidden" : ""} />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div className="flex flex-row mt-[5vh]  justify-between mb-[5vh]">
+        <div className="w-[12vw] hover:text-right transition-all text-2xl">
+          370/1M,
+          <br />
+          Makola,
+          <br />
+          Kiribathgoda,
+          <br />
+          Sri Lanka.
+        </div>
+        <div className="flex flex-col space-y-5">
+          <div className="text-2xl">
+            <p>General enquires</p>
+            <a
+              href="mailto:hello@claviq.com"
+              className="font-medium hover:text-main-500"
+            >
+              hello@claviq.com
+            </a>
+          </div>
+        </div>
+        <div className="text-2xl">
+          <p>Quickly Contact</p>
+          <a
+            href="tel:+94701604161"
+            className="font-medium hover:text-main-500"
+          >
+            +94 70 160 4161
+          </a>
+        </div>
+      </div>
+
+      <div className="flex border-t border-black justify-between mb-[2vh] ">
+        <div className="text-sm mb-4 mt-[4vh]">
+          © 2024 Claviq. All Rights Reserved.
+        </div>
+        <div className="flex justify-center space-x-4 text-sm text-gray-900 mt-[4vh]">
+          <a href="#" className="hover:underline hover:text-black">
+            built by <span className="text-main-500">Claviq</span> with ❤️
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 };
 

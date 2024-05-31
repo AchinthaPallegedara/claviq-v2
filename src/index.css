@@ -216,6 +216,17 @@ a {
     transform: scale(1.1);
   }
 }
+@keyframes textMoveRight {
+  from {
+    transform: translateX(0px); /* Start position */
+  }
+  to {
+    transform: translateX(20px); /* End position */
+  }
+}
+.animate-text-move-right {
+  animation: textMoveRight 0.5s ease forwards; /* Apply animation */
+}
 .animate-zoom-in {
   animation: zoomIn 0.5s ease forwards; /* Apply animation */
 }
@@ -358,4 +369,14 @@ svg.squiggleSeconed {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the footer covers the full height of the viewport */
+}
+
+footer > div:nth-child(1) {
+  flex-grow: 1; /* Makes the main content div take up remaining space */
 }
