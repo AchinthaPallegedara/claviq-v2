@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Lufga";
+  src: url(/fonts/LufgaRegular.ttf);
+}
+
+.Lufga {
+  font-family: "Lufga", sans-serif;
+}
+
 @layer components {
   .underline-animation::after {
     content: "";
