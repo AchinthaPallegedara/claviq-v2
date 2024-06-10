@@ -12,7 +12,8 @@ const App = () => {
       <About />
       <Works />
       <Ideas />
-      <IPadInside />
+      {/* <IPadInside /> */}
+      <Footer />
     </main>
   );
 };
