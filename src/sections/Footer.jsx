@@ -7,7 +7,7 @@ const Footer = () => {
   const [isTalkHovered, setIsTalkHovered] = useState(false);
 
   return (
-    <footer className=" flex flex-col mt-[200vh]  w-full px-[72px] max-lg:px-6 max-xl:px-10  ">
+    <footer className=" flex flex-col -mt-[20vh]  w-full px-[72px] max-lg:px-6 max-xl:px-10  ">
       {/* mt-[200vh] */}
       <div className="flex flex-row items-center justify-between mb-[12vh] max-sm:flex-col max-sm:items-start max-sm:w-full  ">
         <div className="text-9xl max-sm:text-[17vw] font-medium tracking-tighter leading-[0.9] max-lg:text-[110px] w-[70vw] max-sm:w-full max-sm:mt5 ">

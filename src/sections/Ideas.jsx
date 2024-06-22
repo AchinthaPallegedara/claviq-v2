@@ -11,59 +11,59 @@ const Ideas = () => {
   useEffect(() => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    if (!isMobile) {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#ipad",
-          start: "top 12%",
-          end: "bottom 95%",
-          toggleActions: "play play reverse reverse",
-          preventOverlaps: true,
-          fastScrollEnd: true,
-        },
-      });
+    // if (!isMobile) {
+    //   const timeline = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: "#ipad",
+    //       start: "top 12%",
+    //       end: "bottom 95%",
+    //       toggleActions: "play play reverse reverse",
+    //       preventOverlaps: true,
+    //       fastScrollEnd: true,
+    //     },
+    //   });
 
-      timeline.to(contentRef.current, {
-        scale: 2.7,
-        duration: 2,
-        rotate: 9.4,
-        y: -10,
-        x: 800,
-        ease: "power2.inOut",
-      });
+    //     timeline.to(contentRef.current, {
+    //       scale: 2.7,
+    //       duration: 2,
+    //       rotate: 9.4,
+    //       y: -10,
+    //       x: 800,
+    //       ease: "power2.inOut",
+    //     });
 
-      timeline.to("#theHiddenOne", {
-        display: "block",
-        opacity: 1,
-        duration: 0.1,
-        ease: "power2.inOut",
-      });
-    } else {
-      const timelineMob = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#ipad",
-          start: "top 42%",
-          end: "bottom 85%",
-          toggleActions: "play play reverse reverse",
-          preventOverlaps: true,
-          fastScrollEnd: true,
-        },
-      });
+    //     timeline.to("#theHiddenOne", {
+    //       display: "block",
+    //       opacity: 1,
+    //       duration: 0.1,
+    //       ease: "power2.inOut",
+    //     });
+    //   } else {
+    //     const timelineMob = gsap.timeline({
+    //       scrollTrigger: {
+    //         trigger: "#ipad",
+    //         start: "top 42%",
+    //         end: "bottom 85%",
+    //         toggleActions: "play play reverse reverse",
+    //         preventOverlaps: true,
+    //         fastScrollEnd: true,
+    //       },
+    //     });
 
-      timelineMob.to("#ipad", {
-        scale: 5,
-        duration: 2,
-        rotate: 9.4,
-        ease: "power2.inOut",
-      });
+    //   timelineMob.to("#ipad", {
+    //     scale: 5,
+    //     duration: 2,
+    //     rotate: 9.4,
+    //     ease: "power2.inOut",
+    //   });
 
-      timelineMob.to("#theHiddenOne", {
-        display: "block",
-        opacity: 1,
-        duration: 0.1,
-        ease: "power2.inOut",
-      });
-    }
+    //   timelineMob.to("#theHiddenOne", {
+    //     display: "block",
+    //     opacity: 1,
+    //     duration: 0.1,
+    //     ease: "power2.inOut",
+    //   });
+    // }
 
     const svg = divRef.current.querySelector("svg.squiggleSeconed");
     const path = svg.querySelector("path");
