@@ -15,6 +15,7 @@ const WorkCard = ({ id, tagLine, title, img }) => {
         <div className="h-[53vh]  bg-gray-500 rounded-[20px] max-sm:h-[28vh] cardImage">
           <img
             src={img}
+            loading="lazy"
             className={`rounded-[20px] w-full h-full object-cover ${
               isHovered ? "zoom-in" : ""
             }`}

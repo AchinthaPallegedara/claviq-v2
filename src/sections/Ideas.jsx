@@ -147,6 +147,7 @@ const Ideas = () => {
               alt="ipad"
               className="mt-[10vh] translate-y-20 max-sm:mt-0 z-0"
               id="ipad"
+              loading="lazy"
             />
           </div>
 
