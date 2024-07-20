@@ -90,37 +90,39 @@ const Ideas = () => {
   }, []);
 
   useEffect(() => {
-    gsap.fromTo(
-      ".ideatitle",
-      {
-        opacity: 0,
-      },
-      {
-        x: 0,
-        marginLeft: 0,
-        opacity: 1,
-        stagger: 0.05,
-        duration: 0.8,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".ideatitle",
-          start: "bottom bottom",
-          end: "top 10%",
+    if (!window.matchMedia("(max-width: 768px)").matches) {
+      gsap.fromTo(
+        ".ideatitle",
+        {
+          opacity: 0,
         },
-      }
-    );
+        {
+          x: 0,
+          marginLeft: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.8,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: ".ideatitle",
+            start: "bottom bottom",
+            end: "top 10%",
+          },
+        }
+      );
 
-    gsap.to("#ipad", {
-      y: 0,
-      duration: 1,
-      delay: 0.3,
-      scrollTrigger: {
-        trigger: "#ipad",
-        start: "top 100%",
-        end: "bottom 90%",
-        scrub: true,
-      },
-    });
+      gsap.to("#ipad", {
+        y: 0,
+        duration: 1,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: "#ipad",
+          start: "top 100%",
+          end: "bottom 90%",
+          scrub: true,
+        },
+      });
+    }
   }, []);
 
   return (
@@ -131,9 +133,11 @@ const Ideas = () => {
     >
       <div className="bg-transparent" ref={contentRef}>
         <span className="text-[110px] max-sm:text-[15vw] tracking-tight leading-[0.9] max-sm:leading-[0.98]">
-          <span className="ideatitle ml-44">Connecting Ideals to </span>
-          <span className="ideatitle ml-44">Uniquely Crafted </span>
-          <span className="ideatitle ml-44">Experineces</span>
+          <span className="ideatitle ml-44 max-sm:ml-0">
+            Connecting Ideals to{" "}
+          </span>
+          <span className="ideatitle ml-44 max-sm:ml-0">Uniquely Crafted </span>
+          <span className="ideatitle ml-44 max-sm:ml-0">Experineces</span>
         </span>
 
         <div className="flex gap-4 max-sm:flex-col-reverse">

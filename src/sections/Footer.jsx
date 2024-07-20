@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-row mt-[5vh]  justify-between mb-[5vh] max-sm:flex-col-reverse max-sm:space-y-4 max-sm:mb-3 max-sm:justify-center">
-        <div className="w-[12vw] hover:text-right transition-all text-2xl max-sm:w-full max-sm:mt-2 max-sm:text-center ">
+        <div className="w-[12vw] sm:hover:text-right transition-all text-2xl max-sm:w-full max-sm:mt-2 max-sm:text-center ">
           370/1M,
           <br />
           Makola,

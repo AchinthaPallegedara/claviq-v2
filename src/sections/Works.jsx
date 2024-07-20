@@ -88,146 +88,146 @@ const Works = () => {
           },
         }
       );
+      gsap.fromTo(
+        "#id1",
+        {
+          scale: 0.9,
+          x: -10,
+          y: 10,
+          rotate: -2,
+        },
+        {
+          scale: 1,
+          rotate: 0,
+          x: 0,
+          y: 0,
+
+          delay: 0,
+          scrollTrigger: {
+            trigger: "#id1",
+            // toggleActions: "play play reverse pause",
+            start: "top 100%",
+            end: "bottom 90%",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        "#id2",
+        {
+          scale: 0.9,
+          rotate: 2,
+          x: 10,
+          y: 10,
+        },
+        {
+          scale: 1,
+          rotate: 0,
+          x: 0,
+          y: 0,
+
+          delay: 0,
+          scrollTrigger: {
+            trigger: "#id2",
+            toggleActions: "play play reverse pause",
+            start: "top 100%",
+            end: "bottom 90%",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        "#id3",
+        {
+          scale: 0.9,
+          x: -10,
+        },
+        {
+          scale: 1,
+
+          x: 0,
+
+          delay: 0,
+          scrollTrigger: {
+            trigger: "#id3",
+            // toggleActions: "play play reverse pause",
+            start: "top 100%",
+            end: "bottom 90%",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        "#id4",
+        {
+          scale: 0.9,
+
+          x: 10,
+        },
+        {
+          scale: 1,
+
+          x: 0,
+
+          delay: 0,
+          scrollTrigger: {
+            trigger: "#id4",
+            toggleActions: "play play reverse pause",
+            start: "top 100%",
+            end: "bottom 90%",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        "#id5",
+        {
+          scale: 0.9,
+          x: -10,
+          y: 10,
+          rotate: 2,
+        },
+        {
+          scale: 1,
+          rotate: 0,
+          x: 0,
+          y: 0,
+
+          delay: 0,
+          scrollTrigger: {
+            trigger: "#id5",
+            // toggleActions: "play play reverse pause",
+            start: "top 100%",
+            end: "bottom 90%",
+            scrub: true,
+          },
+        }
+      );
+      gsap.fromTo(
+        "#id6",
+        {
+          scale: 0.9,
+          rotate: -2,
+          x: 10,
+          y: 10,
+        },
+        {
+          scale: 1,
+          rotate: 0,
+          x: 0,
+          y: 0,
+
+          delay: 0,
+          scrollTrigger: {
+            trigger: "#id6",
+            toggleActions: "play play reverse pause",
+            start: "top 100%",
+            end: "bottom 90%",
+            scrub: true,
+          },
+        }
+      );
     }
-    gsap.fromTo(
-      "#id1",
-      {
-        scale: 0.9,
-        x: -10,
-        y: 10,
-        rotate: -2,
-      },
-      {
-        scale: 1,
-        rotate: 0,
-        x: 0,
-        y: 0,
-
-        delay: 0,
-        scrollTrigger: {
-          trigger: "#id1",
-          // toggleActions: "play play reverse pause",
-          start: "top 100%",
-          end: "bottom 90%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      "#id2",
-      {
-        scale: 0.9,
-        rotate: 2,
-        x: 10,
-        y: 10,
-      },
-      {
-        scale: 1,
-        rotate: 0,
-        x: 0,
-        y: 0,
-
-        delay: 0,
-        scrollTrigger: {
-          trigger: "#id2",
-          toggleActions: "play play reverse pause",
-          start: "top 100%",
-          end: "bottom 90%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      "#id3",
-      {
-        scale: 0.9,
-        x: -10,
-      },
-      {
-        scale: 1,
-
-        x: 0,
-
-        delay: 0,
-        scrollTrigger: {
-          trigger: "#id3",
-          // toggleActions: "play play reverse pause",
-          start: "top 100%",
-          end: "bottom 90%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      "#id4",
-      {
-        scale: 0.9,
-
-        x: 10,
-      },
-      {
-        scale: 1,
-
-        x: 0,
-
-        delay: 0,
-        scrollTrigger: {
-          trigger: "#id4",
-          toggleActions: "play play reverse pause",
-          start: "top 100%",
-          end: "bottom 90%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      "#id5",
-      {
-        scale: 0.9,
-        x: -10,
-        y: 10,
-        rotate: 2,
-      },
-      {
-        scale: 1,
-        rotate: 0,
-        x: 0,
-        y: 0,
-
-        delay: 0,
-        scrollTrigger: {
-          trigger: "#id5",
-          // toggleActions: "play play reverse pause",
-          start: "top 100%",
-          end: "bottom 90%",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      "#id6",
-      {
-        scale: 0.9,
-        rotate: -2,
-        x: 10,
-        y: 10,
-      },
-      {
-        scale: 1,
-        rotate: 0,
-        x: 0,
-        y: 0,
-
-        delay: 0,
-        scrollTrigger: {
-          trigger: "#id6",
-          toggleActions: "play play reverse pause",
-          start: "top 100%",
-          end: "bottom 90%",
-          scrub: true,
-        },
-      }
-    );
   }, []);
   return (
     <section className="mt-[25vh] max-sm:mt-[10vh] px-[72px] max-lg:px-6 max-xl:px-10">
